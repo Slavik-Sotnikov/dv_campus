@@ -141,7 +141,14 @@
 ## enable rewrites
 
     Options +FollowSymLinks
-    RewriteEngine on
+    RewriteEngine on 
+
+    SetEnvIf Host .*slaviks.local.* MAGE_RUN_CODE=base
+    SetEnvIf Host .*slaviks.local.* MAGE_RUN_TYPE=website
+
+    SetEnvIf Host .*slaviksotnikov.local.* MAGE_RUN_CODE=small_website
+    SetEnvIf Host .*slaviksotnikov.local.* MAGE_RUN_TYPE=website
+
 
 ############################################
 ## you can put here your magento root folder
